@@ -191,15 +191,13 @@ for i=0:N-1
 end 
 
 Umax=1-alpha;
-Umin=0.5-alpha;
+Umin=-alpha;
 Mu=[eye(size(Bd,2)*N);-eye(size(Bd,2)*N)];
 Ulim=[Umax*ones(size(Bd,2)*N,1);-Umin*ones(size(Bd,2)*N,1)];
 M=[Mu];
 W=[Ulim];
 S=[zeros(size(Mu,1),n+1)];
 Hu=Mmono'*Qybar*Mmono+Rbar;
-size(Mmono)
-size(M)
 
 
 
