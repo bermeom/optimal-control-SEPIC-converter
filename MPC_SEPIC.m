@@ -7,5 +7,5 @@ X0=[X0;u(4)];
 r=u(5)*ones(1,N);
 ukm1=u(6);
 X0=[X0;ukm1];
-Ubar= quadprog(2*Hu,2*(X0'*Smono'*Qybar*Mmono-r*Qybar*Mmono),M,W+S*X0);
-y=Ubar(1);
+DeltaU= quadprog(2*Hu,2*(X0'*Smono'*Qybar*Mmono-r*Qybar*Mmono),M,W+S*X0);
+y=ukm1+DeltaU(1);
